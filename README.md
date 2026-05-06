@@ -40,5 +40,5 @@ This project is built for performance and scalability, utilizing a serverless ar
 ## 🚀 Live Deployment
 
 The application is currently containerized and deployed via Google Cloud. 
-**Access the live platform here:** [ZeroDay Mentor](https://zeroday-mentor-1043710710704.us-central1.run.app)
+**Access the live platform here:** [ZeroDay Mentor](https://zeroday-mentor-1043710710704.asia-south1.run.app/)
 
