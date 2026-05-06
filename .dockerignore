@@ -1,0 +1,10 @@
+**/node_modules
+npm-debug.log
+.env
+.git
+database/
+*.sqlite
+frontend/dist
+backend/node_modules
+frontend/node_modules
+**/package-lock.json

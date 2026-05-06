@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fira Code", monospace;
+  --font-mono: "Fira Code", monospace;
+
+  --color-zero-black: #050505;
+  --color-zero-border: #1A1A1A;
+  --color-zero-green: #00FF41;
+  --color-zero-cyan: #00FFFF;
+  --color-zero-red: #FF003C;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-zero-black);
+  color: var(--color-zero-green);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-zero-green);
+  color: var(--color-zero-black);
+}
+
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--color-zero-red);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--color-zero-cyan);
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0%, 80% { clip: rect(0, 0, 0, 0); }
+  81% { clip: rect(23px, 9999px, 86px, 0); }
+  85% { clip: rect(98px, 9999px, 66px, 0); }
+  90% { clip: rect(51px, 9999px, 4px, 0); }
+  95% { clip: rect(31px, 9999px, 7px, 0); }
+  100% { clip: rect(0, 0, 0, 0); }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
